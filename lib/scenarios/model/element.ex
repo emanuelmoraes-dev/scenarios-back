@@ -1,4 +1,4 @@
-defmodule Scenarios.Element do
+defmodule Scenarios.Model.Element do
   use Ecto.Schema
   import Ecto.Changeset
 
