@@ -2,7 +2,7 @@ defmodule Scenarios.Model.Element do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @all_fields [:full_name, :nickname, :description, :type]
+  @fields [:full_name, :nickname, :description, :type]
   @required_fields [:full_name, :nickname, :type]
 
   schema "elements" do
@@ -17,7 +17,7 @@ defmodule Scenarios.Model.Element do
   @doc false
   def changeset(attrs) do
     %__MODULE__{}
-    |> cast(attrs, @all_fields)
+    |> cast(attrs, @fields)
     |> validate_required(@required_fields)
   end
 end
